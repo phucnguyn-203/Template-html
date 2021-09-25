@@ -1,0 +1,42 @@
+/* Tablet */
+
+@media (min-width:740px) and (max-width:1023px){
+	.projects__img{
+		width: 50%;
+	}
+
+	.member__item{
+		width: 50%;
+	}
+}
+
+/* Mobile */
+
+@media (max-width:739px){
+	.header__navbar{
+		display: none;
+	}
+
+	.banner__text--regular{
+		display: none;
+	}
+
+	.projects__img{
+		width: 100%;
+	}
+
+	.member__item{
+		width: 100%;
+	}
+
+	.contact__btn {
+		padding: 12px 16px;
+		font-size: 20px;
+	}
+
+	.contact__submit-form-btn{
+		width: 100%;
+		padding: 16px;
+		font-size: 18px;
+	}
+}

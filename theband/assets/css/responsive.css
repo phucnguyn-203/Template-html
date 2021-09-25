@@ -1,0 +1,83 @@
+/*Responsive*/
+
+
+/*pc */
+@media(min-width:64em){
+	
+}
+
+/*tablet*/
+@media(min-width:46.25em) and (max-width:63.9375em){
+	
+}
+
+
+/*mobile*/
+@media(max-width:46.1875em){
+	
+	#header{
+		overflow: hidden;
+	}
+
+
+	#nav {
+		display: block;
+	}
+	
+	#nav > li{
+		display: block;
+	}
+
+	#nav > li:first-child{
+		display: inline-block;
+	}
+	#nav .subnav{
+		position: initial;
+		width: 100%;
+		background-color: #000;
+		
+	}
+	#nav .subnav li a {
+		color: #fff;
+		padding: 2px 45px;
+	}
+	.search-bnt{
+		display: none;
+	}
+	.menu-mobile-btn{
+		display: block;
+	}
+
+	.full-width-btn{
+		width: 100%;
+	}
+
+	#content .member-item{
+		width: 100%;
+		margin: 30px 0px;
+	}
+
+	.member-item .member-img {
+		width: 60%;
+		
+	}
+
+	.mobile-places-list {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+
+	.mobile-contact{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.contact-infor{
+		margin-bottom: 15px;
+		line-height: 2;
+	}
+	#slider .text-content{
+		display: none;
+	}
+
+}

@@ -1,0 +1,265 @@
+:root{
+	--black-color:#000;
+	--while-color:#fff;
+	--hover-color:#ccc;
+	--border-color:#f1f1f1;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-family: Verdana, sans-serif;
+	scroll-behavior: smooth;
+}
+
+.clear{
+	clear: both;
+}
+
+/* Header */
+
+.header{
+	height: 54px;
+	background-color: var(--while-color);
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 16px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.header__logo-link{
+	text-decoration: none;
+	letter-spacing: 4px;
+	color:var(--black-color);
+	font-size: 15px;
+	display: inline-block;
+	padding: 10px 16px;
+}
+
+.header__logo-link:hover ,.header__navbar ul li:hover a{
+	background-color: var(--hover-color);
+}
+
+.header__navbar ul li{
+	list-style: none;
+	display: inline-block;
+}
+
+.header__navbar ul li a{
+	text-decoration: none;
+	color:var(--black-color);
+	letter-spacing: 4px;
+	font-size: 15px;
+	padding: 10px 16px;
+}
+
+/* Banner */
+
+.banner{
+	position: relative;
+	margin-top: 54px;
+}
+
+.banner__img{
+	max-width: 100%;
+	display: block;
+}
+
+.banner__text{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 36px;
+	margin: 10px 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	letter-spacing: 4px;
+}
+
+.banner__text--bold{
+	padding: 8px 16px;
+	color: var(--black-color);
+	background-color: transparent;
+	border: 2px solid var(--black-color);
+	font-weight: 500;
+}
+
+.banner__text--regular{
+	color: var(--while-color);
+	font-weight: 500;
+}
+
+.content{
+	padding: 0 32px;
+}
+
+.content__section{
+	width: 1285px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.content__section-heading{
+	font-weight: 400;
+	font-size: 24px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-bottom: 1px solid var(--border-color);
+	padding: 16px 0;
+}
+
+/* Project */
+
+.content__section-projects{
+	padding-top: 45px;
+	margin: 0 -8px;
+}
+
+.projects__img{
+	position: relative;
+	float: left;
+	width: 25%;
+	padding: 8px;
+}
+
+.projects__img img {
+	width: 100%;
+	display: block;
+}
+
+.projects__name-house{
+	position: absolute;
+	top: 15px;
+	left: 8px;
+}
+
+.projects__name-house span{
+	padding: 8px 16px;
+	color: var(--while-color);
+	background: var(--black-color);
+	font-size: 15px;
+}
+
+/* About */
+
+.content__section-about{
+	padding-top: 20px;
+}
+
+.about__content{
+	font-size: 15px;
+	line-height: 1.4;
+}
+
+.member__list{
+	margin: 0 -8px;
+}
+
+.member__item{
+	margin-top: 52px;
+	width: 25%;
+	float: left;
+	padding: 8px;
+}
+
+.member__img img{
+	width: 100%;
+}
+
+.member__infor{
+	margin-top: 22px;
+}
+
+.member__name{
+	font-size: 24px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.member__position{
+	font-size: 15px;
+	opacity: .7;
+	margin-bottom: 20px;
+}
+
+.member__slogan{
+	font-size: 15px;
+	line-height: 1.4;
+	margin-bottom: 15px;
+}
+
+.contact__btn{
+	width: 100%;
+	padding: 10px 16px;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+	font-size: 16px;
+	background-color: #f1f1f1;
+}
+
+.contact__btn:hover{
+	background-color: var(--hover-color);
+	cursor: pointer;
+}
+
+.content__section-contact{
+	margin-top: 15px;
+}
+
+.content__section-contact p{
+	margin-bottom: 15px;
+	font-size: 15px;
+}
+
+.contact__form-input{
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	font-size: 15px;
+}
+
+.contact__submit-form-btn{
+	border: none;
+	background-color: var(--black-color);
+	color: var(--while-color);
+	padding: 10px 16px;
+	margin: 16px 0;
+	font-size: 15px;
+	-webkit-appearance: none;
+}
+
+.contact__submit-form-btn:hover{
+	color:var(--black-color);
+	background-color: var(--hover-color);
+	cursor: pointer;
+}
+
+.content__section-map{
+	width: 100%;
+}
+
+.footer{
+	background-color: var(--black-color);
+	color: var(--while-color);
+	text-align: center;
+	padding: 32px 0;
+	font-size: 15px;
+}
+
+.footer p a{
+	color: var(--while-color);
+}

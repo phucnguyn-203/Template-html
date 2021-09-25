@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+	--while-color:#fff;
+	--black-color:#000;
+	--text-color:#333;
+	--primary-color: #fb5533;
+	--header-height:120px;
+	--navbar-height:31px;
+	--header-with-search-height:calc(var(--header-height) - var(--navbar-height));
+
+}
+
+*{
+	box-sizing: inherit;
+	
+}
+
+html{
+	font-size: 62.5%;
+	line-height: 1.6rem;
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+}
+
+/* Resonsive */
+.grid{
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.grid__full-width{
+	width: 100%;
+}
+
+.grid__row{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+.grid__column-2{
+	padding-left: 5px;
+	padding-right: 5px;
+	width: calc(2/12 * 100%);
+}
+.grid__column-2-4{
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 20%;
+}
+.grid__column-10{
+	padding-left: 5px;
+	padding-right: 5px;
+	width: calc(10/12 * 100%);
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes scale_animation{
+	0%{
+		opacity: 0;
+		transform: scale(0);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Modal */
+
+.modal{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: fadeIn ease-in .5s ;
+}
+
+
+
+.btn{
+	height: 34px;
+	min-width: 120px;
+	border: none;
+	color: var(--text-color);
+	font-size: 1.5rem;
+	border-radius: 2px;
+	background: none;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: none;
+	line-height:34px;
+	display: inline-block;
+	text-align: center;
+	background-color: var(--while-color);
+}
+.btn.btn--normal:hover{
+	background-color: rgba(0, 0, 0,0.05);
+}
+
+.btn.btn--primary{
+	background-color: var(--primary-color);
+	color: var(--while-color);
+}
+
+.fa-google {
+	background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+  }
+
+.pagination{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+}
+
+.pagination-item{
+	margin: 0 15px;
+}
+
+.pagination-icon{
+	font-weight: 300;
+}
+
+.pagination-link{
+	display: block;
+	width: 40px;
+	height: 30px;
+	text-decoration: none;
+	color:#aeaeae;
+	font-size: 2rem;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 2px;
+}
+
+.pagination__link--active{
+	background-color: var(--primary-color);
+	color:var(--while-color);
+}
+
+.pagination__link--active:hover{
+	opacity: .95;
+}
+
