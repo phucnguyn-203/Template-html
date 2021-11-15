@@ -11,8 +11,10 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link rel="stylesheet" href="./assets/css/grid.css">
 	<link rel="stylesheet" href="./assets/css/base.css">
 	<link rel="stylesheet" href="./assets/css/main.css">
+	<link rel="stylesheet" href="./assets/css/responsive.css">
 
 	<title>Shopee</title>
 </head>
@@ -20,8 +22,8 @@
 <body>
 	<div class="app">
 		<header class="header">
-			<div class="grid">
-				<nav class="header__navbar">
+			<div class="grid wide">
+				<nav class="header__navbar hide-on-mobile-tablet">
 					<ul class="header__navbar-list">
 						<li class="header__navbar-item header__navbar-item--separate">
 							Vào cửa hàng trên ứng dụng TickID
@@ -158,7 +160,14 @@
 
 				<!--Search-->
 				<div class="header__with-search">
-					<div class="header__logo">
+
+					<label for="mobile-search-checkbox" class="header-mobile__search">
+						<i class="fas fa-search header-mobile__search-icon"></i>
+					</label>
+
+					<input type="checkbox" hidden id="mobile-search-checkbox">
+
+					<div class="header__logo hide-on-tablet">
 						<a href="/" class="header__logo-link">
 							<svg viewBox="0 0 192 65" class="header__logo-img">
 								<g fill-rule="evenodd">
@@ -216,25 +225,6 @@
 								<!--Have product-->
 								<h4 class="header_cart-heading">Sản phẩm mới thêm</h4>
 								<ul class="header_cart-item-list">
-									<li class="header_cart-item">
-										<img class="header_cart-item-img"
-											src="./assets/img/328d5413659cb779f5dde27644e23556_tn.jfif" alt="headphone">
-										<div class="header_cart-item-infor">
-											<div class="header_cart-item-top">
-												<h5 class="header__item-name">Tai nghe bluetooth không dây kết nối cực
-													xa</h5>
-												<div class="header__item-price-wrap">
-													<span class="header__item-price">205.000đ</span>
-													<span class="header__item-multiply">x</span>
-													<span class="header__item-quantity">1</span>
-												</div>
-											</div>
-											<div class="header_cart-item-bottom">
-												<span class="header__item-category">Phân loại: bạc</span>
-												<span class="header__item-remove">Xóa</span>
-											</div>
-										</div>
-									</li>
 									<li class="header_cart-item">
 										<img class="header_cart-item-img"
 											src="./assets/img/328d5413659cb779f5dde27644e23556_tn.jfif" alt="headphone">
@@ -391,11 +381,26 @@
 					</div>
 				</div>
 			</div>
+
+			<ul class="header-sort-bar">
+				<li class="header-sort-bar__item active">
+					<a href="" class="header-sort-bar__link">Liên quan</a>
+				</li>
+				<li class="header-sort-bar__item">
+					<a href="" class="header-sort-bar__link">Mới nhất</a>
+				</li>
+				<li class="header-sort-bar__item">
+					<a href="" class="header-sort-bar__link">Bán chạy</a>
+				</li>
+				<li class="header-sort-bar__item">
+					<a href="" class="header-sort-bar__link">Giá</a>
+				</li>
+			</ul>
 		</header>
 		<div class="app_container">
-			<div class="grid">
-				<div class="grid__row app__content">
-					<div class="grid__column-2">
+			<div class="grid wide">
+				<div class="row sm-gutter app__content">
+					<div class="col l-2 m-0 c-0">
 						<nav class="category">
 							<h3 class="category__heading">
 								<i class="fas fa-bars categoty__heading-icon"></i>
@@ -418,8 +423,8 @@
 						</nav>
 					</div>
 
-					<div class="grid__column-10">
-						<div class="home-filter">
+					<div class="col l-10 m-12 c-12">
+						<div class="home-filter hide-on-mobile-tablet">
 							<span class="home-filter__label">Sắp xếp theo</span>
 							<button class="btn  home-filter-btn">Phổ biến</button>
 							<button class="btn btn--primary home-filter-btn">Mới nhất</button>
@@ -451,10 +456,234 @@
 								</div>
 							</div>
 						</div>
-
+						
+						<nav class="mobile-category">
+							<ul class="mobile-category__list">
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích Dụng cụ và thiết bị tiện ích</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Dụng cụ và thiết bị tiện ích</a>
+								</li>
+							</ul>
+						</nav>
 						<div class="home-product">
-							<div class="grid__row">
-								<div class="grid__column-2-4">
+							<div class="row sm-gutter">
+								<div class="col l-2-4 m-4 c-6">
+									<a href="" class="home-product-item">
+										<div class="home-product-item__img"
+											style="background-image: url('./assets/img/ps5.jfif');"></div>
+										<h4 class="home-product-item__name">Máy chơi game console thế hệ thứ 5
+											playstation 5 ps5</h4>
+										<div class="home-product-item__price">
+											<span class="home-product-item__price-old">16.000.000</span>
+											<span class="home-product-item__price-current">15.500.000</span>
+										</div>
+										<div class="home-product-item__action">
+											<span class="home-product-item__like home-product-item__liked">
+												<i class="far fa-heart  home-product-item__icon-not-like"></i>
+												<i class="fas fa-heart home-product-item__icon-liked"></i>
+											</span>
+											<div class="home-product-item__rating">
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star"></i>
+											</div>
+											<span class="home-product-item__sold">120 Đã bán</span>
+										</div>
+										<div class="home-product-item__origin">
+											<span class="home-product-item__brand">Sony</span>
+											<span class="home-product-item__nation">Japan</span>
+										</div>
+										<div class="home-product-item__favourite">
+											<i class="fas fa-check"></i>
+											<span>Yêu Thích</span>
+										</div>
+										<div class="home-product-item__sale-off">
+											<span class="home-product-item__sale-off-percent">10%</span>
+											<span class="home-product-item__sale-off-label">Giảm</span>
+										</div>
+									</a>
+								</div>
+								<div class="col l-2-4 m-4 c-6">
+									<a href="" class="home-product-item">
+										<div class="home-product-item__img"
+											style="background-image: url('./assets/img/ps5.jfif');"></div>
+										<h4 class="home-product-item__name">Máy chơi game console thế hệ thứ 5
+											playstation 5 ps5</h4>
+										<div class="home-product-item__price">
+											<span class="home-product-item__price-old">16.000.000</span>
+											<span class="home-product-item__price-current">15.500.000</span>
+										</div>
+										<div class="home-product-item__action">
+											<span class="home-product-item__like home-product-item__liked">
+												<i class="far fa-heart  home-product-item__icon-not-like"></i>
+												<i class="fas fa-heart home-product-item__icon-liked"></i>
+											</span>
+											<div class="home-product-item__rating">
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star"></i>
+											</div>
+											<span class="home-product-item__sold">120 Đã bán</span>
+										</div>
+										<div class="home-product-item__origin">
+											<span class="home-product-item__brand">Sony</span>
+											<span class="home-product-item__nation">Japan</span>
+										</div>
+										<div class="home-product-item__favourite">
+											<i class="fas fa-check"></i>
+											<span>Yêu Thích</span>
+										</div>
+										<div class="home-product-item__sale-off">
+											<span class="home-product-item__sale-off-percent">10%</span>
+											<span class="home-product-item__sale-off-label">Giảm</span>
+										</div>
+									</a>
+								</div>
+								<div class="col l-2-4 m-4 c-6">
+									<a href="" class="home-product-item">
+										<div class="home-product-item__img"
+											style="background-image: url('./assets/img/ps5.jfif');"></div>
+										<h4 class="home-product-item__name">Máy chơi game console thế hệ thứ 5
+											playstation 5 ps5</h4>
+										<div class="home-product-item__price">
+											<span class="home-product-item__price-old">16.000.000</span>
+											<span class="home-product-item__price-current">15.500.000</span>
+										</div>
+										<div class="home-product-item__action">
+											<span class="home-product-item__like home-product-item__liked">
+												<i class="far fa-heart  home-product-item__icon-not-like"></i>
+												<i class="fas fa-heart home-product-item__icon-liked"></i>
+											</span>
+											<div class="home-product-item__rating">
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star"></i>
+											</div>
+											<span class="home-product-item__sold">120 Đã bán</span>
+										</div>
+										<div class="home-product-item__origin">
+											<span class="home-product-item__brand">Sony</span>
+											<span class="home-product-item__nation">Japan</span>
+										</div>
+										<div class="home-product-item__favourite">
+											<i class="fas fa-check"></i>
+											<span>Yêu Thích</span>
+										</div>
+										<div class="home-product-item__sale-off">
+											<span class="home-product-item__sale-off-percent">10%</span>
+											<span class="home-product-item__sale-off-label">Giảm</span>
+										</div>
+									</a>
+								</div>
+								<div class="col l-2-4 m-4 c-6">
+									<a href="" class="home-product-item">
+										<div class="home-product-item__img"
+											style="background-image: url('./assets/img/ps5.jfif');"></div>
+										<h4 class="home-product-item__name">Máy chơi game console thế hệ thứ 5
+											playstation 5 ps5</h4>
+										<div class="home-product-item__price">
+											<span class="home-product-item__price-old">16.000.000</span>
+											<span class="home-product-item__price-current">15.500.000</span>
+										</div>
+										<div class="home-product-item__action">
+											<span class="home-product-item__like home-product-item__liked">
+												<i class="far fa-heart  home-product-item__icon-not-like"></i>
+												<i class="fas fa-heart home-product-item__icon-liked"></i>
+											</span>
+											<div class="home-product-item__rating">
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star"></i>
+											</div>
+											<span class="home-product-item__sold">120 Đã bán</span>
+										</div>
+										<div class="home-product-item__origin">
+											<span class="home-product-item__brand">Sony</span>
+											<span class="home-product-item__nation">Japan</span>
+										</div>
+										<div class="home-product-item__favourite">
+											<i class="fas fa-check"></i>
+											<span>Yêu Thích</span>
+										</div>
+										<div class="home-product-item__sale-off">
+											<span class="home-product-item__sale-off-percent">10%</span>
+											<span class="home-product-item__sale-off-label">Giảm</span>
+										</div>
+									</a>
+								</div>
+								<div class="col l-2-4 m-4 c-6">
+									<a href="" class="home-product-item">
+										<div class="home-product-item__img"
+											style="background-image: url('./assets/img/ps5.jfif');"></div>
+										<h4 class="home-product-item__name">Máy chơi game console thế hệ thứ 5
+											playstation 5 ps5</h4>
+										<div class="home-product-item__price">
+											<span class="home-product-item__price-old">16.000.000</span>
+											<span class="home-product-item__price-current">15.500.000</span>
+										</div>
+										<div class="home-product-item__action">
+											<span class="home-product-item__like home-product-item__liked">
+												<i class="far fa-heart  home-product-item__icon-not-like"></i>
+												<i class="fas fa-heart home-product-item__icon-liked"></i>
+											</span>
+											<div class="home-product-item__rating">
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star home-product-item__gold-star"></i>
+												<i class="fas fa-star"></i>
+											</div>
+											<span class="home-product-item__sold">120 Đã bán</span>
+										</div>
+										<div class="home-product-item__origin">
+											<span class="home-product-item__brand">Sony</span>
+											<span class="home-product-item__nation">Japan</span>
+										</div>
+										<div class="home-product-item__favourite">
+											<i class="fas fa-check"></i>
+											<span>Yêu Thích</span>
+										</div>
+										<div class="home-product-item__sale-off">
+											<span class="home-product-item__sale-off-percent">10%</span>
+											<span class="home-product-item__sale-off-label">Giảm</span>
+										</div>
+									</a>
+								</div>
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -493,7 +722,7 @@
 									</a>
 								</div>
 
-								<div class="grid__column-2-4">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -532,7 +761,7 @@
 									</a>
 								</div>
 
-								<div class="grid__column-2-4">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -571,7 +800,7 @@
 									</a>
 								</div>
 
-								<div class="grid__column-2-4">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -610,7 +839,7 @@
 									</a>
 								</div>
 
-								<div class="grid__column-2-4">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -649,7 +878,7 @@
 									</a>
 								</div>
 
-								<div class="grid__column-2-4">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -688,7 +917,7 @@
 									</a>
 								</div>
 
-								<div class="grid__column-2-4">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -727,7 +956,7 @@
 									</a>
 								</div>
 
-								<div class="grid__column-2-4">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -766,7 +995,7 @@
 									</a>
 								</div>
 
-								<div class="grid__column-2-4">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -805,7 +1034,7 @@
 									</a>
 								</div>
 
-								<div class="grid__column-2-4">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<div class="home-product-item__img"
 											style="background-image: url('./assets/img/ps5.jfif');"></div>
@@ -884,9 +1113,9 @@
 			</div>
 		</div>
 		<footer class="footer">
-			<div class="grid">
-				<div class="grid__row">
-					<div class="grid__column-2-4">
+			<div class="grid wide footer__content">
+				<div class="row">
+					<div class="col l-2-4 m-4 c-6">
 						<h3 class="footer__heading">Chăm sóc khách hàng</h3>
 						<ul class="footer__list">
 							<li class="footer__list-item">
@@ -900,7 +1129,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="grid__column-2-4">
+					<div class="col l-2-4 m-4 c-6">
 						<h3 class="footer__heading">Giới thiệu</h3>
 						<ul class="footer__list">
 							<li class="footer__list-item">
@@ -914,7 +1143,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="grid__column-2-4">
+					<div class="col l-2-4 m-4 c-6">
 						<h3 class="footer__heading">Danh mục</h3>
 						<ul class="footer__list">
 							<li class="footer__list-item">
@@ -928,33 +1157,35 @@
 							</li>
 						</ul>
 					</div>
-					<div class="grid__column-2-4">
+					<div class="col l-2-4 m-4 c-6">
 						<h3 class="footer__heading">Theo dõi</h3>
 						<ul class="footer__list">
 							<li class="footer__list-item">
-								
+
 								<a href="" class="footer__list-item-link">
 									<i class="footer__link-icon fab fa-facebook"></i>
 									Facebook</a>
 							</li>
 							<li class="footer__list-item">
-								
+
 								<a href="" class="footer__list-item-link">
 									<i class="footer__link-icon fab fa-instagram"></i>
 									Instagram</a>
 							</li>
 							<li class="footer__list-item">
-								
+
 								<a href="" class="footer__list-item-link">
 									<i class="footer__link-icon fab fa-linkedin"></i>
 									LinkedIn</a>
 							</li>
 						</ul>
 					</div>
-					<div class="grid__column-2-4">
+					<div class="col l-2-4 m-8 c-12">
 						<h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
 						<div class="footer__download">
-							<img class="footer__download-qr-img" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/d91264e165ed6facc6178994d5afae79.png" alt="">
+							<img class="footer__download-qr-img"
+								src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/d91264e165ed6facc6178994d5afae79.png"
+								alt="">
 							<div class="footer__dowload-app">
 								<img class="footer__download-img" src="./assets/img/gg_play.png" alt="">
 								<img class="footer__download-img" src="./assets/img/app_store.png" alt="">
@@ -964,8 +1195,8 @@
 				</div>
 			</div>
 			<div class="footer__bottom">
-				<div class="grid">
-						<p class="footer__text">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</p>
+				<div class="grid wide">
+					<p class="footer__text">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</p>
 				</div>
 			</div>
 		</footer>
